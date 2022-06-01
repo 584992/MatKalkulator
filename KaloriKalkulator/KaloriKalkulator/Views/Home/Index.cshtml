@@ -6,6 +6,7 @@
 }
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <div class="text-center">
     <h1 class="display-4">Velkommen!</h1>
@@ -16,14 +17,12 @@
 
     <form asp-action="SearchItem" asp-controller="Home" enctype="multipart/form-data" method="post">
         <div class="inline">
-            <input type="text" class="search inline" placeholder="Søk etter vare" name="Search">
+            <input type="text" class="search" placeholder="Søk etter vare" name="Search">
         </div>
-            <button type="submit" class="btn" style="left:70em; top:25%; width:3em; height:3em;"><i class="fa fa-search"></i></button>
-
+            <button type="submit" class="btn" style="left:73vw; top:21.5vw; width:3em; height:3em; border-radius: 10px;"><i class="fa fa-search"></i></button>
     </form>
 
 @{
-
     if (ViewBag.Empty == false)
     {
         <text>
