@@ -1,0 +1,49 @@
+﻿@page
+@using KaloriKalkulator
+@model IEnumerable<Food>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="text-center">
+    <h1 class="display-4">Velkommen!</h1>
+    <p>Søk opp ønsket vare og plasser i listen</p>
+</div>
+
+<br /> 
+
+    <form asp-action="SearchItem" asp-controller="Home" enctype="multipart/form-data" method="post">
+        <div class="inline">
+            <input type="text" class="search inline" placeholder="Søk etter vare" name="Search">
+        </div>
+            <button type="submit" class="btn" style="left:70em; top:25%; width:3em; height:3em;"><i class="fa fa-search"></i></button>
+
+    </form>
+
+@{
+
+    if (ViewBag.Empty == false)
+    {
+        <text>
+        <table class="table">
+      <thead class="thead-dark">
+          <tr>
+              <th scope="col">Vare</th>
+              <th scope="col">Kalorier per 100 gram</th>
+          </tr>
+      </thead>
+      <tbody>
+        @foreach (var item in Model)
+        {
+           <td>@item.Item</td>
+           <td>@item.Calories</td>
+        }
+        </tbody>
+      </table>
+        </text>
+    }
+  }
+  
+

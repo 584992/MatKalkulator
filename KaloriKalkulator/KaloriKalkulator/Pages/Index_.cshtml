@@ -1,0 +1,26 @@
+﻿@page
+@model Food
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Velkommen!</h1>
+    <p>Søk opp ønsket vare, og plasser i listen</p>
+</div>
+
+<br /> 
+
+<div class="input-group rounded">
+    <form asp-action="SearchItem" asp-controller="Home" enctype= "multipart/form-data">
+       <div class="searchBar">
+          <input type="text" class="search" placeholder="Søk etter vare">
+          <button style="left:83%" type="submit" class="btn">Søk</button>
+        </div>
+  </form>
+</div>
+
+
+
+
+

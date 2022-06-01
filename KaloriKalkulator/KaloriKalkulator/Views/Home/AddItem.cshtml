@@ -1,0 +1,35 @@
+﻿@page
+@using KaloriKalkulator
+@model Food
+@{
+   Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center">Ny vare</h2>
+<p style="text-align:center">Legg til en vare i databasen</p>
+
+    <form asp-action="AddItem" asp-controller="Home" method="post" enctype="multipart/form-data">
+    <div class="center">
+      <div class="form-group">
+        <label for="Varenavn">Varenavn</label> 
+        <input type="text" class="form-control" name="Item" id="Item" placeholder="Skriv inn varenavn">
+      </div>
+      <br />
+      <div class="form-group">
+        <label for="Kalorier">Kalorier</label>
+        <input type="text" class="form-control" name="Calories" id="Calories" placeholder="Antall kalorier">
+      </div>
+      <br />
+          <button type="submit" id="AddItem" class="btn">Legg til vare</button>
+    </div>
+    </form>
+
+    <div style="left:46%; top:60%; position:absolute;">
+        @ViewBag.IsString
+    </div>
+
+
+<script>
+
+    
+</script>
